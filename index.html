@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,27 @@
     <link rel="stylesheet" href="./public/style.css">
     <title>Todo List</title>
 </head>
-<body>
 
-    <script src="./src/init.js"></script>    
+<body class="body">
+    <div class="container">
+        <div class="header">
+            <h2 class="to-do">
+                To Do List
+            </h2>
+            <button class="btn">
+                Add
+            </button>
+        </div>
+        <div class="form">
+            <label class="label" for="add-task">Task</label>
+            <input id="add-task" type="text" placeholder="Add Task">
+            <button class="save" type="submit">Save Task</button>
+        </div>
+        <div class="display-todos">
+
+        </div>
+    </div>
+    <script src="./src/init.js"></script>
 </body>
+
 </html>
