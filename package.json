@@ -19,5 +19,8 @@
   "homepage": "https://github.com/samirm00/todolist#readme",
   "dependencies": {
     "json-server": "^0.17.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4"
   }
 }

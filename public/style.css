@@ -18,7 +18,7 @@
   font-size: 1.2 rem;
   border-radius: 5px;
   padding: 25px;
-  height: 400px;
+  min-height: 400px;
   max-height: 100vh;
   width: 500px;
   max-width: 750px;
@@ -30,7 +30,10 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  padding: 10px;
+  align-items: center;
+  border-bottom: 1px solid #3a0ca3;
 }
 
 .btn,
@@ -46,7 +49,7 @@
   cursor: pointer;
 }
 
-.form {
+#form {
   width: 100%;
 }
 
@@ -59,6 +62,7 @@
 
 #add-task {
   display: block;
+  color: #3a0ca3;
   font-size: 1rem;
   width: 100%;
   padding: 10px 5px;
@@ -67,6 +71,50 @@
   margin-bottom: 10px;
 }
 
+#add-task:focus {
+  outline: none;
+}
+
 .save {
   width: 100%;
+}
+
+.display-todos {
+  width: 100%;
+  height: 45px;
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.status {
+  margin-right: 15px;
+  margin-left: 5px;
+  font-size: 2rem;
+  accent-color: #ff006e;
+  cursor: pointer;
+}
+
+.todo-text {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+span {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: auto;
+  width: 45px;
+  background-color: #3a0ca3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
 }
