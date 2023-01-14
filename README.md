@@ -13,4 +13,7 @@
 - More info about 
 [json-server](https://www.npmjs.com/package/json-server)
 
+## Work-Pending
 
+Implement **post** and **delete** functionality
+Implement the **task checkbox status** using **object.completed**
