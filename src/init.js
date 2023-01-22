@@ -1,5 +1,4 @@
 // HIDE FORM ELEMENT BY BUTTON HOUSE
-
 function hideAddBtn() {
   const taskForm = document.getElementById('form');
   if (taskForm.style.display === 'none') {
@@ -14,10 +13,9 @@ addBtn[0].addEventListener('click', hideAddBtn);
 
 // GET CONTAINER DIV
 const container = document.getElementsByClassName('container');
-console.log(container[0]);
 
 // CREATE DOM ELEMENT
-function createDomEl(array) {
+export function createDomEl(array) {
   return array.forEach((object) => {
     const divEl = document.createElement('div');
     divEl.className = 'display-todos';
@@ -40,7 +38,6 @@ function createDomEl(array) {
     return divEl;
   });
 }
-
 // FETCH TODO FROM BACKEND
 const getTodos = async () => {
   const url = 'http://localhost:5000/todos';
@@ -56,3 +53,40 @@ const getTodos = async () => {
 };
 
 getTodos();
+
+// POST NEW TODOS
+const postTodos = async () => {
+  const url = 'http://localhost:5000/todos';
+
+  const newTodo = document.getElementById('add-task');
+
+  const todoDetails = {
+    title: newTodo.value,
+    completed: false,
+  };
+
+  try {
+    const result = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(todoDetails),
+    });
+
+    const data = await result.json();
+    getTodos();
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+const saveBtn = document.getElementById('save-task');
+saveBtn.addEventListener('click', postTodos);
+
+// DELETE TODOS
+const deleteTodo = async () => {
+  const url = `http://localhost:5000/todos/${id}`;
+
+  //const id =
+};
